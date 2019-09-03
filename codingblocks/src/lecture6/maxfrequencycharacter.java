@@ -1,0 +1,40 @@
+package lecture6;
+
+import java.util.Scanner;
+
+public class maxfrequencycharacter {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int k,max=0,j;
+		char ans='a',i;
+		String str=new String();
+		Scanner s=new Scanner(System.in);
+		System.out.println("enter string");
+		str=s.next();
+		
+		for(i='a';i<='z';i++)
+		{
+			k=0;
+			for(j=0;j<=str.length()-1;j++)
+			{
+				if(str.charAt(j)==i)
+				{
+					k++;
+				}
+				
+			}
+			if(k>max)
+			{
+				max=k;
+				ans=i;
+			}
+		}
+		System.out.println(ans);
+		
+		
+		
+
+	}
+
+}
